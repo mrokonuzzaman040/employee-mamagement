@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-        esmExternals: true,
+        serverActions: true,
     },
-
+    images: {
+        domains: [ 'fmliqecnrxgzwvucipeu.supabase.co' ],
+    },
 };
 
 export default nextConfig;
