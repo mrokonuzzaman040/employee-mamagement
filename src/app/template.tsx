@@ -1,20 +1,13 @@
+import Header from '@/components/landing-page/header';
 import React from 'react';
 
-interface TemplateProps {
-    children: React.ReactNode;
-}
-
-const Template: React.FC<TemplateProps> = ({ children }) => {
+const HomePageLayout = ({ children }: { children: React.ReactNode }) => {
     return (
-        <div
-            className="
-      h-screen
-      p-6 flex 
-      justify-center"
-        >
+        <main>
+            <Header />
             {children}
-        </div>
+        </main>
     );
 };
 
-export default Template;
+export default HomePageLayout;
