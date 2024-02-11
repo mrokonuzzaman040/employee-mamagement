@@ -20,7 +20,7 @@ import Loader from '../global/Loader';
 import { createWorkspace } from '@/lib/supabase/queries';
 import { useToast } from '../ui/use-toast';
 import { useRouter } from 'next/navigation';
-import { useAppState } from '@/lib/providers/state-provider';
+// import { useAppState } from '@/lib/providers/state-provider';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { CreateWorkspaceFormSchema } from '@/lib/types';
 import { z } from 'zod';
@@ -36,8 +36,8 @@ const DashboardSetup: React.FC<DashboardSetupProps> = ({
 }) => {
     const { toast } = useToast();
     const router = useRouter();
-    const { dispatch } = useAppState();
-    const [selectedEmoji, setSelectedEmoji] = useState('💼');
+    // const { dispatch } = useAppState();
+    const [selectedEmoji, setSelectedEmoji] = useState('💻');
     const supabase = createClientComponentClient();
     const {
         register,
@@ -91,13 +91,13 @@ const DashboardSetup: React.FC<DashboardSetupProps> = ({
                 bannerUrl: '',
             };
             const { data, error: createError } = await createWorkspace(newWorkspace);
-            if (createError) {
-                throw new Error();
-            }
-            dispatch({
-                type: 'ADD_WORKSPACE',
-                payload: { ...newWorkspace, folders: [] },
-            });
+            // if (createError) {
+            //     throw new Error();
+            // }
+            // dispatch({
+            //     type: 'ADD_WORKSPACE',
+            //     payload: { ...newWorkspace, folders: [] },
+            // });
 
             toast({
                 title: 'Workspace Created',

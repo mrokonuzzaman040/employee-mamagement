@@ -4,6 +4,7 @@ import "./globals.css";
 import db from "@/lib/supabase/db";
 import { ThemeProvider } from "@/lib/providers/next-theme-provider";
 import { twMerge } from "tailwind-merge";
+import AppStateProvider from "@/lib/providers/state-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,9 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem>
+          {/* <AppStateProvider> */}
           {children}
+          {/* </AppStateProvider> */}
         </ThemeProvider>
       </body>
     </html>
