@@ -115,7 +115,7 @@ body {
 }
 
 .ql-toolbar {
-  @apply flex flex-wrap items-center justify-center dark:bg-background/70 bg-white/40 backdrop-blur-md z-40 sticky top-0 !border-none left-0 right-0;
+  @apply flex flex-wrapitemscenter justify-centerrk:bg-background0 bg-w dark:b backdrop-blur z- sticky topborder-none left-w right00;
 }
 
 .ql-formats {
