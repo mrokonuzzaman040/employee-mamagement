@@ -1,8 +1,9 @@
-"use server";
-import { z } from "zod";
-import { FormSchema } from "../types";
-import { cookies } from "next/headers";
-import { createRouteHandlerClient } from "@supabase/auth-helpers-nextjs";
+'use server';
+
+import { z } from 'zod';
+import { createRouteHandlerClient } from '@supabase/auth-helpers-nextjs';
+import { FormSchema } from '../types';
+import { cookies } from 'next/headers';
 
 export async function actionLoginUser({
   email,
@@ -22,11 +23,11 @@ export async function actionSignUpUser({
 }: z.infer<typeof FormSchema>) {
   const supabase = createRouteHandlerClient({ cookies });
   const { data } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("email", email);
+    .from('profiles')
+    .select('*')
+    .eq('email', email);
 
-  if (data?.length) return { error: { message: "User already exists", data } };
+  if (data?.length) return { error: { message: 'User already exists', data } };
   const response = await supabase.auth.signUp({
     email,
     password,
