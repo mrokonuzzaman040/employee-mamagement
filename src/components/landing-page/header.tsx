@@ -80,7 +80,7 @@ const Header = () => {
       >
         <Image
           src={Logo}
-          alt="Cypress Logo"
+          alt="OfficeMate Logo"
           width={25}
           height={25}
         />
@@ -89,7 +89,7 @@ const Header = () => {
           dark:text-white
         "
         >
-          cypress.
+          OfficeMate.
         </span>
       </Link>
       <NavigationMenu className="hidden md:block">

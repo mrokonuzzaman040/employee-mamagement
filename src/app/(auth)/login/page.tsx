@@ -64,7 +64,7 @@ const LoginPage = () => {
         >
           <Image
             src={Logo}
-            alt="cypress Logo"
+            alt="OfficeMate Logo"
             width={50}
             height={50}
           />
@@ -72,7 +72,7 @@ const LoginPage = () => {
             className="font-semibold
           dark:text-white text-4xl first-letter:ml-2"
           >
-            cypress.
+            OfficeMate.
           </span>
         </Link>
         <FormDescription
