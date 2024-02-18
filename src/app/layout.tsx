@@ -25,9 +25,9 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
           enableSystem>
-          {/* <AppStateProvider> */}
-          {children}
-          {/* </AppStateProvider> */}
+          <AppStateProvider>
+            {children}
+          </AppStateProvider>
         </ThemeProvider>
       </body>
     </html>
